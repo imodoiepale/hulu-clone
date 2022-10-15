@@ -1,4 +1,4 @@
-# Hulu Clone
+# Hulu Clone UI using Server Side Rendering and TMDB API
 
 
 ![hulu](https://user-images.githubusercontent.com/101794204/195981581-5cd3f423-7fe9-4105-82d8-d22084aa206e.png)
