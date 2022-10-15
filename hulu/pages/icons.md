@@ -1,0 +1,6 @@
+HomeIcon
+BoltIcon
+FolderOpenIcon
+CheckBadgeIcon
+MagnifyingGlassIcon
+UserIcon
