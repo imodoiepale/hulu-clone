@@ -1,3 +1,21 @@
+# Hulu Clone
+
+
+![hulu](https://user-images.githubusercontent.com/101794204/195981581-5cd3f423-7fe9-4105-82d8-d22084aa206e.png)
+   
+   
+<br><br>
+
+### Link for the Live Preview is :https://hulu-clone-topaz-xi.vercel.app/
+<br>
+
+#### Tech Stack
+<br>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,nextjs,vercel" />
+  </a>
+<br><br>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
