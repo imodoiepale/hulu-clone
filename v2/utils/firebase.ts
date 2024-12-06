@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
-
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAXxTAFt0nmeRb3l-38l6UZAjfNy2Wyz3M",
@@ -9,13 +8,13 @@ const firebaseConfig = {
   projectId: "moviezz-mania",
   storageBucket: "moviezz-mania.firebasestorage.app",
   messagingSenderId: "546749825581",
-  appId: "1:546749825581:web:85d18b157bab13d3ddaea4",
-  measurementId: "G-2074WC02QM"
+  appId: "1:546749825581:web:85d18b157bab13d3ddaea4"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
+export const auth = getAuth(app);
 export const db = getFirestore(app);
 
+// Optional: Add persistence
+import { setPersistence, browserLocalPersistence } from "firebase/auth";
+setPersistence(auth, browserLocalPersistence);
