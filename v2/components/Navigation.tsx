@@ -2,9 +2,10 @@
 
 'use client'
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, PlusCircle, List, LogOut, User } from 'lucide-react';
+import { Home, PlusCircle, List, LogOut } from 'lucide-react';
 import { auth } from '@/utils/firebase';
 import { signOut } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
@@ -12,6 +13,20 @@ import { useRouter } from 'next/navigation';
 export default function Navigation() {
     const pathname = usePathname();
     const router = useRouter();
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            setIsAuthenticated(!!user);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+    // If not authenticated, don't render the navigation
+    if (!isAuthenticated) {
+        return null;
+    }
 
     const handleSignOut = async () => {
         try {

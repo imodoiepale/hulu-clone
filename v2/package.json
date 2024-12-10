@@ -5,7 +5,8 @@
   "scripts": {
     "build": "next build",
     "build:mobile": "next build --config next.config.capacitor.js",
-    "cap:sync": "npm run build:mobile && npx cap sync"
+    "cap:sync": "npm run build:mobile && npx cap sync",
+    "dev": "next dev"
   },
   "dependencies": {
     "@capacitor/android": "^6.2.0",
@@ -22,9 +23,12 @@
     "date-fns": "^4.1.0",
     "firebase": "^11.0.2",
     "lucide-react": "^0.468.0",
+    "mobx": "^6.13.5",
+    "mobx-react-lite": "^4.0.7",
     "next": "14.2.16",
     "react": "^18",
     "react-dom": "^18",
+    "redis": "^4.7.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "v2": "file:"

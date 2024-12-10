@@ -1,11 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import { auth, db } from '@/utils/firebase';
+import { auth, db } from '/utils/firebase';
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+
 
 interface MovieStats {
   totalMovies: number;
